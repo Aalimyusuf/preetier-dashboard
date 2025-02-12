@@ -1,0 +1,75 @@
+body.wp-admin {
+  background-color: #f4f4f4;
+}
+#adminmenumain, #adminmenuback, #adminmenuwrap {
+  display: none !important;
+}
+#wpcontent, #wpfooter {
+  margin-left: 0 !important;
+}
+.cdr-nav-bar {
+  background-color: #1f466d;
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.cdr-nav-bar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+.cdr-nav-bar a:hover {
+  background-color: #0073aa;
+  color: #fff;
+}
+.cdr-blocks-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+  justify-content: center;
+}
+.cdr-block {
+  display: inline-block;
+  width: 200px;
+  margin: 10px;
+  padding: 20px;
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+  text-decoration: none;
+  color: #23282d;
+}
+.cdr-block a {
+  text-decoration: none;
+  color: #23282d;
+  font-weight: bold;
+}
+.cdr-block:hover {
+  transform: scale(1.05);
+  background-color: #0073aa;
+  color: #fff;
+  font-size: 15px;
+
+}
+.cdr-block:hover {
+  background-color: #0073aa;
+  color: #fff !important;
+}
+
+.cdr-block:hover h3 {
+  color: #fff !important;
+}
