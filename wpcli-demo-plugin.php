@@ -85,8 +85,36 @@ function cdr_add_custom_blocks() {
 }
 add_action('wp_dashboard_setup', 'cdr_add_custom_blocks');
 
-// Enqueue admin styles
 function cdr_enqueue_admin_styles() {
     wp_enqueue_style('cdr-admin-styles', plugins_url('css/admin-styles.css', __FILE__));
 }
 add_action('admin_enqueue_scripts', 'cdr_enqueue_admin_styles');
+
+function cdr_add_dashboard_title() {
+    global $pagenow;
+    if ($pagenow !== 'index.php') return;
+
+    echo '<div class="cdr-dashboard-title">Prettier Dashboard</div>';
+}
+add_action('admin_notices', 'cdr_add_dashboard_title');
+
+function cdr_enqueue_admin_scripts() {
+    wp_enqueue_script('cdr-admin-script', plugins_url('js/admin-scripts.js', __FILE__), array(), false, true);
+}
+add_action('admin_enqueue_scripts', 'cdr_enqueue_admin_scripts');
+
+
+function cdr_enqueue_google_fonts() {
+    wp_enqueue_style('cdr-google-fonts', 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap', false);
+}
+add_action('admin_enqueue_scripts', 'cdr_enqueue_google_fonts');
+
+
+
+
+
+
+
+
+
+
